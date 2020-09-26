@@ -1,15 +1,18 @@
-import React from 'react';
-import './App.css';
-
-import AppHeader from './components/AppHeader';
-import Home from './pages/Home';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
+import Routes from "./Routes";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <AppHeader className="App-header">
-        <Home/>        
-      </AppHeader>
+    <div className="App container">
+      <Navbar fluid collapseOnSelect>
+        <Navbar.Brand>
+              <Link to="/">Home</Link>
+        </Navbar.Brand>
+      </Navbar>
+      <Routes />
     </div>
   );
 }
