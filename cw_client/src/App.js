@@ -1,18 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
-import Routes from "./Routes";
+import NavigationBar from "./components/NavigationBar";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App container">
-      <Navbar fluid collapseOnSelect>
-        <Navbar.Brand>
-              <Link to="/">Home</Link>
-        </Navbar.Brand>
-      </Navbar>
-      <Routes />
+    <div>
+      <NavigationBar/>
     </div>
   );
 }
