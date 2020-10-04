@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Navbar, NavItem, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import Routes from "../Routes";
 
 function NavigationBar() {
@@ -18,6 +17,7 @@ function NavigationBar() {
             Curly Wurly Blog
             </Navbar.Brand>
         <Nav className="ml-auto">
+          <Nav.Link href="/blog">Blog</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/register">Register</Nav.Link>
         </Nav>
