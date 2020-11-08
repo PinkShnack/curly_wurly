@@ -1,9 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Blog from "./pages/Blog/Blog";
-import Home from "./pages/Home/Home";
-import LoginForm from "./pages/Login/LoginForm";
-import RegistrationForm from "./pages/Registration/RegistrationForm";
+import Blog from "./Blog/Blog";
+import Home from "./Home/Home";
 
 export default function Routes() {
   return (
@@ -13,12 +11,6 @@ export default function Routes() {
       </Route>
       <Route exact path="/blog">
         <Blog />
-      </Route>
-      <Route exact path="/login">
-        <LoginForm />
-      </Route>
-      <Route exact path="/register">
-        <RegistrationForm />
       </Route>
     </Switch>
   );
