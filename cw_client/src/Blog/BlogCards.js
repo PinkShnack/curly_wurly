@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Card, CardDeck, Col, ListGroup} from 'react-bootstrap'
+import { DateTime } from "luxon";
 import black from './black.png'
 
 
@@ -32,10 +33,11 @@ class BlogCards extends Component {
       <div>
         <CardDeck>
         {posts.map(post => (
-          <Col sm={6} style={{ paddingBottom: '24px' }}>
+          <Col lg={6} style={{ paddingBottom: '24px' }}>
             <Card>
               <Card.Img variant="top" src={black} width="100%" height="180"/>
               <Card.Body>
+               <Card.Subtitle className="mb-2 text-muted">{(DateTime.fromISO(post.date)).toLocaleString(DateTime.DATE_FULL)}</Card.Subtitle>
                 <Card.Title>{post.title.rendered}</Card.Title>
                 <Card.Text dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></Card.Text>
               </Card.Body>
